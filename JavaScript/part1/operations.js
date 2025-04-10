@@ -69,3 +69,5 @@ console.log(num2 != num3)
 
 console.log(num1 > num3)
 console.log(num1 < num3)
+
+//   = is also a operator
