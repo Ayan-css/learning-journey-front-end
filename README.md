@@ -35,8 +35,8 @@ This repository is my digital journal — a place where I document everything I 
 | Jan 2025     | HTML + CSS basics                   | ✅ Completed |
 | Feb 2025     | JavaScript fundamentals             | ✅ Completed |
 | Mar 2025     | Tailwind + DOM manipulation         | ✅ Completed |
-| Apr 2025     | Projects & GitHub workflow          | 🔄 In Progress |
-| May 2025     | React & Web App Projects            | 🔜 Coming Soon |
+| May 2025     | Projects & GitHub workflow          | 🔄 In Progress |
+| July 2025     | React & Web App Projects            | 🔜 Coming Soon |
 
 ---
 
