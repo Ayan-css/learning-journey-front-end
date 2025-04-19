@@ -130,3 +130,40 @@ class BankAccount {
 
 let account = new BankAccount()
 console.log(account.getBalance())
+
+//Abstraction 
+
+class CoffeMachine {
+
+    // Private inner method (should be hidden from outside user)
+    start(){
+        // Imagine calling a database, filtering settings, warming machine, etc.
+        // All this logic is hidden from the user
+        return `Starting the machine...`;
+    }
+
+    // Another internal step — user doesn't need to know how coffee is brewed
+    brewCoffee(){
+        // Imagine temperature control, water pressure, timing, etc.
+        return `Brewing coffee`;
+    }
+
+    // ✅ This is the **abstracted interface** for the user
+    // The user just presses a single button — doesn't worry about what's inside
+    pressBrewButton(){
+        // Internally we call the other complex methods
+        let msgOne = this.start();      // Call start method
+        let msgTwo = this.brewCoffee(); // Call brewCoffee method
+
+        // We return only the important result
+        return `${msgOne}\n${msgTwo}`;
+    }
+}
+
+// Creating a coffee machine
+let myMachine = new CoffeMachine();
+
+// User only interacts with the simple interface (pressBrewButton)
+// All complex steps are abstracted inside the class
+console.log(myMachine.pressBrewButton());
+
