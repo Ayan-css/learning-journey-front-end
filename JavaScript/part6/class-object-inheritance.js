@@ -104,3 +104,29 @@ let myCar = new Car("Toyota", "Corolla");
 
 console.log(myCar.drive()); 
 // Outputs: Toyota : This is an inheritance example
+
+
+
+
+// Encapsulation
+
+/*
+Encapsulation means:
+
+    Hiding the internal details of an object and exposing only what’s necessary.
+*/
+
+class BankAccount {
+    #balance = 0; // we an use `#` to hide the data 
+
+    deposite(ammount){
+        this.#balance += ammount;
+        return this.#balance;
+    }
+    getBalance(){
+        return `$ ${this.#balance}`
+    }
+}
+
+let account = new BankAccount()
+console.log(account.getBalance())
