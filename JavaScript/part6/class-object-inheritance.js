@@ -224,3 +224,57 @@ let miniClac = new Calculator();
 // Correct way to call the static method is directly on the class itself, not on the instance
 console.log(Calculator.add(2, 3)); // ✅ Output: 5
 
+// Getter and setter
+
+class Employe {
+    constructor(name, salary) {
+        // Check if the salary is negative
+        // If yes, throw an error to prevent invalid data
+        if (salary < 0) {
+            throw new Error("Salary cannot be in a negative");
+        }
+
+        // Assign name to the employee
+        this.name = name;
+
+        // Use _salary to indicate it's a private-like property
+        this._salary = salary;
+    }
+
+    // Getter method for salary
+    // This method is triggered when we try to access emp.salary
+    get salary() {
+        // Instead of showing the actual salary, return a message
+        return `You are not allowed to see a salary`;
+    }
+
+    // Setter method for salary
+    // This method is triggered when we assign a new value to emp.salary
+    set salary(value) {
+        // Check if the new salary is negative
+        if (value < 0) {
+            console.error(`Invalid salary`); // Show error if value is invalid
+        } else {
+            this._salary = value; // Set the new valid salary
+        }
+    }
+}
+
+// ❌ This will throw an error because -50000 is invalid
+let emp = new Employe("Affan", -50000); // Error: Salary cannot be in a negative
+
+// ✅ If we want to avoid the error, we should pass a valid salary like:
+let emp2 = new Employe("Affan", 50000); // Creates object successfully
+
+// Accessing _salary directly (not recommended — should use proper methods)
+console.log(emp2._salary); // Outputs: 50000
+
+// Trying to access salary using the getter
+console.log(emp2.salary); // Outputs: You are not allowed to see a salary
+
+// Using the setter to update salary
+emp2.salary = 6000; // Updates _salary to 6000
+
+// Check updated salary value directly (for testing)
+console.log(emp2._salary); // Outputs: 6000
+
