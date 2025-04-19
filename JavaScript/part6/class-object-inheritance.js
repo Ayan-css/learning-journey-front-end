@@ -167,3 +167,40 @@ let myMachine = new CoffeMachine();
 // All complex steps are abstracted inside the class
 console.log(myMachine.pressBrewButton());
 
+
+
+
+//polymorphism
+
+/*
+Polymorphism means "many forms".
+It allows different objects to respond differently to the same method name.
+*/
+
+// Polymorphism Example in JavaScript
+
+// Parent class
+class Bird {
+    // Method that can be overridden
+    fly() {
+        return `Flying....`;
+    }
+}
+
+// Child class that inherits from Bird
+class Penguin extends Bird {
+    // Overriding the fly() method with its own version
+    fly() {
+        return `Penguins can't fly`;
+    }
+}
+
+// Creating an instance of Bird
+let bird = new Bird();
+
+// Creating an instance of Penguin (which is a type of Bird)
+let penguin = new Penguin();
+
+
+console.log(bird.fly());       // Output: Flying....
+console.log(penguin.fly());    // Output: Penguins can't fly
