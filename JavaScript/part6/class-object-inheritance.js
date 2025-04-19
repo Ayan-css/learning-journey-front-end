@@ -204,3 +204,23 @@ let penguin = new Penguin();
 
 console.log(bird.fly());       // Output: Flying....
 console.log(penguin.fly());    // Output: Penguins can't fly
+
+
+// 🔢 Static Method Example in JavaScript
+
+class Calculator {
+    // Static method, which means it belongs to the class itself, not an instance
+    static add(a, b) {
+        return a + b;  // Simply adds the two numbers
+    }
+}
+
+// Creating an instance of the Calculator class (but we won't use this for calling 'add')
+let miniClac = new Calculator();
+
+// Uncommenting this line will give an error because 'add' is a static method and should not be called on an instance
+// console.log(miniClac.add(2, 3));  // ❌ Error: add is not a function
+
+// Correct way to call the static method is directly on the class itself, not on the instance
+console.log(Calculator.add(2, 3)); // ✅ Output: 5
+
