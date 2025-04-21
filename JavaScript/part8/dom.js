@@ -34,3 +34,36 @@ document.getElementById('removeLastTask').addEventListener('click',function () {
     let removedTask = document.getElementById('taskList')
     removedTask.lastElementChild.remove()
 })
+
+// Example 6 
+document.getElementById('clickMeButton').addEventListener('dblclick',function () {
+   alert("hello")
+})
+
+// Example 7
+document.getElementById('teaList').addEventListener('click',function(event){
+   if (event.target && event.target.matches(".teaItem")){
+      alert("you have selected: " + event.target.textContent)
+   }
+}
+)
+
+// Example 8
+
+document.getElementById("feedbackForm").addEventListener("submit",function (event) {
+   event.preventDefault();
+   let feedback = document.getElementById('feedbackInput').value
+   document.getElementById('feedbackDisplay').textContent = `Feedback is ${feedback}`
+})
+
+// Example 9
+
+document.addEventListener('DOMContentLoaded', function () {
+   document.getElementById('domStatus').textContent = "DOM fully loaded"
+})
+// Example 10
+
+document.getElementById('toggleHighlight').addEventListener('click',function(){
+   let descriptionText = document.getElementById('descriptionText')
+   descriptionText.classList.toggle("highlight")
+})
