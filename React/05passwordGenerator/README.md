@@ -1,8 +1,4 @@
-Sure! Here's your complete `README.md` file content for your **React Password Generator** project—all wrapped in one markdown file:
 
----
-
-```markdown
 # 🔐 React Password Generator
 
 A simple and customizable password generator built using **React** and **Tailwind CSS**. Users can choose the length of the password and include numbers and special characters. One-click copy to clipboard functionality is also included.
@@ -99,4 +95,4 @@ src/
 Made with ❤️ by Ayan (https://github.com/Ayan-css)
 Feel free to connect or contribute!
 
-```
+
