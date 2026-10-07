@@ -36,10 +36,10 @@ function App() {
       </form>
         <div className=' lg:w-1/2 flex-wrap p-10'>
         <h1 className='font-bold'>Your Notes</h1>
-        <div className='h-full flex mt-5 flex-wrap gap-5  overflow-auto'>
+        <div className='h-full flex mt-5 items-start justify-start flex-wrap gap-5  overflow-auto'>
           {task.map(function(elem, idx){
 
-          return <div key={idx} className='h-70 w-65 rounded-2xl bg-white text-black'>
+          return <div key={idx} className='h-70 w-65 rounded-2xl bg-[url(https://pngtree.com/freepng/legal-pad-isolated-on-transparent-background_20688991.html)] bg-cover bg-center text-black'>
             <h3 className='text-center leading-tight font-black uppercase'>{elem.title}</h3>
             <p className='px-3 pt-2 leading-tight font-bold h-full overflow-auto text-gray-600'>{elem.details}</p>
           </div>
