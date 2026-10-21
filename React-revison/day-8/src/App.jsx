@@ -59,10 +59,10 @@ function App() {
             return (
               <div
                 key={idx}
-                className="h-70 w-65 rounded-2xl bg-[url(https://pngtree.com/freepng/legal-pad-isolated-on-transparent-background_20688991.html)] bg-red-200 bg-cover bg-center text-black flex flex-col justify-between"
+                className="h-70 w-65 rounded-2xl bg-[url('https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png')]  bg-cover bg-center text-black flex flex-col justify-between"
               >
                 <div className="flex flex-col flex-1 min-h-0">
-                  <h3 className="text-center leading-tight font-black text-white uppercase">
+                  <h3 className="text-center leading-tight font-black text-gray-800 uppercase">
                     {elem.title}
                   </h3>
                   <p className="px-3 pt-2 leading-tight font-bold h-full text-wrap overflow-y-auto overflow-x-hidden whitespace-normal wrap-break-word text-gray-600">
